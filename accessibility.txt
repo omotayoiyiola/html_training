@@ -1,0 +1,25 @@
+Absolutely! Making websites accessible is essential for ensuring everyone 
+— including people with disabilities — can use your site. 
+This is called Accessibility, often shortened to a11y 
+(because there are 11 letters between "a" and "y").
+
+Here are best practices for accessibility, focusing on ARIA roles, aria-* attributes, and keyboard navigation.
+
+header nav 
+
+<button>Submit</button>
+
+Provides the semantic meaning of an element when native HTML is not used.
+
+Common Role	Purpose
+button	Acts like a button
+navigation	Marks navigation menus
+dialog	Popup/modal
+banner	Site-wide heading area
+main	Primary content section
+region	Landmark for grouped content
+
+<div role="navigation" aria-label="Main menu">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+</div>

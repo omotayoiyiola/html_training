@@ -1,0 +1,9 @@
+What Are Meta Tags?
+Meta tags provide metadata (data about data) — things like:
+
+Character encoding
+Why? UTF-8 supports nearly all characters across all languages.
+
+Page description
+How your site behaves on mobile
+How it looks when shared on social media
