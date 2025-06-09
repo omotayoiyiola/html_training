@@ -1,0 +1,72 @@
+What is CSS
+CSS stands for Cascading Style Sheets.
+It is a stylesheet language used to describe the presentation (look and formatting) of a document written in HTML.
+
+CSS controls colors, fonts, layout, spacing, animation, and more — turning plain HTML into beautiful, styled web pages.
+
+Syntax 
+
+selector {
+  property: value;
+}
+
+Inline styling
+  <h1 style="color: red">Welcome to my Portfolio Page</h1>
+
+Internal CSS
+  <h2>Welcome to my Portfolio Page: Internal Styling</h2>
+
+External styling
+created styles.css file and linked it to index.html file
+
+Type	   Location	          Use Case
+Inline	    Inside HTML tags	Quick tests or overrides
+Internal	Inside <style>	    Small/single-page sites
+External	Linked .css file	Preferred for real websites
+
+Selector types
+
+1. Element selector (Its about html tags)
+body {
+  background-color: pink;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+  font-size: large;
+  color: blue;
+}
+
+
+2. Class Selector (.class) Identified with a . prefix
+Targets any element with a specific class name. 
+Can be reused across multiple elements.
+<span class="highlight">Important</span>
+
+3. ID Selector (#id)
+Targets a single, unique element with a specific ID.
+
+4. Grouping Selectors
+Apply the same styles to multiple selectors by separating them with commas.
+
+Instead of repeating same style for different selectors, merge the selectors
+h1 {
+  font-size: large;
+  color: blue;
+}
+
+h2 {
+  font-size: large;
+  color: blue;
+}
+
+Rather do this
+h1, h2 {
+  font-size: large;
+  color: blue;
+}
+
+
+5. Universal Selector (*)
+Targets all elements on the page.
+Often used for resetting default browser styles.
