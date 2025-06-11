@@ -70,3 +70,194 @@ h1, h2 {
 5. Universal Selector (*)
 Targets all elements on the page.
 Often used for resetting default browser styles.
+
+
+ 1. HEX (Hexadecimal) 0-9 a-f 
+ total of 6 digits
+Format: #xxxxxx 
+rgb(5, 6, 7)
+#ffffff
+#fff same as #ffffff
+#f00 same as #f00000
+#000000
+
+(Red, Green, Blue in hex)
+
+Ranges from 00 to FF (0–255 in decimal) 
+
+3. HSL (Hue, Saturation, Lightness)
+Format: hsl(H, S%, L%)
+Hue: 0–360 (color circle)
+Saturation: % of color intensity
+Lightness: % of brightness
+
+color: hsl(240, 100%, 50%);
+
+Use hsla() for opacity.
+
+CSS Units
+Units define how big or small something is in CSS — like font size, 
+width, margin, etc.
+
+em — Relative to Parent’s Font Size
+1em = size of the parent font
+Good for scaling within components
+
+3. rem — Relative to Root Font Size
+1rem = root element font-size (usually 16px)
+More consistent than em
+
+4. % — Percentage
+Relative to the parent element’s size
+
+5. vh — Viewport Height
+1vh = 1% of the height of the browser window
+height: 100vh; /* Full screen height */
+
+6. vw — Viewport Width
+1vw = 1% of the width of the browser window
+width: 100vw; /* Full screen width */
+
+
+FONT
+1. font-family
+Sets the typeface (font) for the text.
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+2. font-size
+Sets the size of the text.
+p {
+  font-size: 16px;
+}
+
+3. font-weight
+Controls the boldness of the text.
+
+100 - 900
+Numeric values: 100 (thin) to 900 (very bold)
+
+bold 700
+h1 {
+  font-weight: bold;       /* or 700 */
+}
+
+p {
+  font-weight: 300;        /* lighter */
+}
+
+4. line-height
+Sets the vertical space between lines of text.
+p {
+  line-height: 1.5;
+}
+
+5. text-align
+Aligns text horizontally.
+h1 {
+  text-align: center;
+}
+
+Values:
+left, right, center, justify
+
+6. text-decoration
+Adds decorative lines like underline or strikethrough.
+a {
+  text-decoration: none;
+}
+
+Common values:
+none, underline, overline, line-through
+
+7. letter-spacing
+Adjusts spacing between characters.
+h2 {
+  letter-spacing: 2px;
+}
+
+Positive values = more space
+Negative values = tighter text
+
+
+p {
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: justify;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+
+BOX MODEL
+Certainly! Here's a clear and concise note on the CSS Box Model, 
+including margin, padding, border, width, height, 
+and box-sizing: border-box.
+
++---------------------------+
+|        margin             |
+|  +---------------------+  |
+|  |     border          |  |
+|  |  +--------------+   |  |
+|  |  |  padding     |   |  |
+|  |  | +--------+   |   |  |
+|  |  | | content |   |   |  |
+|  |  | +--------+   |   |  |
+|  |  +--------------+   |  |
+|  +---------------------+  |
++---------------------------+
+
+1. width & height
+Sets the size of the content area.
+div {
+  width: 200px;
+  height: 100px;
+}
+
+2. padding
+Space inside the border, around the content. 
+It increases the total box size 
+(unless using box-sizing: border-box).
+div {
+  padding: 20px;
+}
+
+3. border
+The edge of the element. You can set thickness, style, and color.
+div {
+  border: 2px solid black;
+}
+
+4. margin
+Space outside the border, used to create distance between elements.
+div {
+  margin: 30px;
+}
+
+5. box-sizing
+✅ content-box (default)
+Width/height = content only
+
+Padding & border are added outside
+/* Default */
+.box {
+  box-sizing: content-box;
+}
+
+
+Always include this to make layout predictable:
+* {
+  box-sizing: border-box;
+}
+
+Summary Table
+Property	Description
+width	Width of content area
+height	Height of content area
+padding	Space inside the box, around the content
+border	Edge of the element
+margin	Space outside the box
+box-sizing	How box size is calculated

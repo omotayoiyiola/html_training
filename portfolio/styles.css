@@ -11,6 +11,7 @@ p {
 .highlight {
   background-color: yellow;
   margin-left: 50px;
+  margin-top: 30px;
 }
 
 .container {
@@ -32,4 +33,12 @@ h2 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h4 {
+  color: hsl(50, 100%, 50%);
+}
+
+h5 {
+  text-align: right;
 }
