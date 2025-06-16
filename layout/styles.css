@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.container_second {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.item {
+  background: gold;
+  padding: 20px;
+  width: 150px;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}

@@ -1,0 +1,13 @@
+body {
+  font-size: 20px;
+  background-color: blueviolet;
+}
+
+/*Mobile view*/
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    background-color: white;
+  }
+}

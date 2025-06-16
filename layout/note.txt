@@ -1,0 +1,126 @@
+Building a responsive layout and design
+
+1. Flexbox Overview
+Flexbox is a modern CSS layout model that makes it easier to align,
+distribute, and space elements — especially when building 
+responsive interfaces.
+
+To enable Flexbox:
+
+1.
+.container {
+    display: flex;
+}
+
+2. 
+justify-content
+Controls horizontal alignment of items in the container.
+
+Value	        Meaning
+flex-start	    Align to the left (default)
+center	        Center horizontally
+flex-end	    Align to the right
+space-between	Equal spacing between items
+space-around	Equal space around each item
+space-evenly	Even spacing between and around
+
+3.
+align-items
+Controls vertical alignment of flex items.
+
+Value	      Meaning
+stretch	      (default) Stretches to fill container
+flex-start	  Align items to top
+center	      Center items vertically
+flex-end	  Align items to bottom
+
+Direction and Wrapping
+✅ flex-direction
+Changes the main axis direction (row or column).
+.container {
+  flex-direction: row;     /* default */
+  /* column, row-reverse, column-reverse */
+}
+
+.flex-wrap
+Allows items to wrap onto multiple lines.
+.container {
+  flex-wrap: wrap;
+}
+
+gap
+Adds spacing between items without using margin hacks.
+
+ Responsive Design Tips
+Use flex-wrap to let items shift on smaller screens
+Use media queries to adjust layout per device size
+Combine Flexbox with width: 100%, max-width, and % units
+
+
+CSS Grid Layout
+Goals:
+Build advanced two-dimensional layouts
+Control both rows and columns easily
+Make complex, responsive grids with minimal code
+
+CSS Grid Layout is a powerful layout system in CSS that lets 
+you design grid-based layouts in both rows and columns.
+
+.container {
+  display: grid;
+}
+
+2. Defining Columns with grid-template-columns
+This sets the number and size of columns in your grid.
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+}
+
+You can also use fractions (fr) for flexible space:
+grid-template-columns: 1fr 2fr; /* 1/3 and 2/3 split */
+
+You can even repeat columns:
+grid-template-columns: repeat(3, 1fr);
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+Placing Items in Grid
+You can place items manually using grid-column and grid-row:
+
+.item {
+  grid-column: 1 / 3; /* spans column 1 to 2 */
+  grid-row: 2 / 3;
+}
+
+
+Grid Areas (Named Zones)
+You can name parts of your layout and assign items to those areas.
+
+
+6. Responsive Grids
+You can make grids responsive with:
+
+✅ auto-fit or auto-fill with minmax():
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+This means:
+If space is enough, more columns will be added
+If space is tight, the columns shrink but don’t go below 200px
+
+
+7. Bonus: Aligning Items in Grid
+.container {
+  justify-items: center; /* aligns items horizontally */
+  align-items: center;   /* aligns items vertically */
+}
