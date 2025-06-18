@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Header Example</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      /* Sticky Header */
+      header {
+        position: sticky;
+        top: 0;
+        background-color: #0d6efd;
+        color: rgb(210, 201, 36);
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+        z-index: 10;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Content Blocks */
+      section {
+        padding: 40px;
+        background-color: #f1f1f1;
+        border-bottom: 1px solid #df2932;
+      }
+
+      section:nth-child(even) {
+        background-color: #97afc7;
+      }
+    </style>
+  </head>
+  <body>
+    <header>🌟 I stick to the top when scrolling</header>
+
+    <!-- Lots of Scrollable Content -->
+    <section>
+      <h2>Section 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
+        numquam...
+      </p>
+    </section>
+
+    <section>
+      <h2>Section 2</h2>
+      <p>
+        More placeholder text to help show the sticky effect during scroll...
+      </p>
+    </section>
+
+    <section style="position: sticky; top: 0">
+      <h2>Section 3</h2>
+      <p>
+        Keep scrolling! Notice the header stays visible at the top of the
+        screen...
+      </p>
+    </section>
+
+    <section>
+      <h2>Section 4</h2>
+      <p>Sticky headers are useful for navigation, titles, and alerts...</p>
+    </section>
+
+    <section>
+      <h2>Section 5</h2>
+      <p>Last section. Scroll up and down to test the sticky behavior.</p>
+    </section>
+    <section>
+      <h2>Section 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
+        numquam...
+      </p>
+    </section>
+
+    <section>
+      <h2>Section 2</h2>
+      <p>
+        More placeholder text to help show the sticky effect during scroll...
+      </p>
+    </section>
+
+    <section>
+      <h2>Section 3</h2>
+      <p>
+        Keep scrolling! Notice the header stays visible at the top of the
+        screen...
+      </p>
+    </section>
+
+    <section>
+      <h2>Section 4</h2>
+      <p>Sticky headers are useful for navigation, titles, and alerts...</p>
+    </section>
+
+    <section>
+      <h2>Section 5</h2>
+      <p>Last section. Scroll up and down to test the sticky behavior.</p>
+    </section>
+  </body>
+</html>

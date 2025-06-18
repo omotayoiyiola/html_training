@@ -1,0 +1,60 @@
+Goals:
+Understand how to position elements precisely
+Create sticky headers that stay visible on scroll
+Control element stacking using z-index
+
+1. Types of CSS Positioning
+Position Value	 Description
+static	         Default position (follows normal document flow)
+relative	     Offsets element relative to its normal position
+absolute	     Positions element relative to its closest positioned ancestor
+fixed	         Positions element relative to the viewport (stays in place when scrolling)
+sticky	         Acts like relative until it hits a scroll threshold, then becomes fixed
+
+2. Sticky Headers
+Sticky headers stay visible at the top as you scroll down the page, 
+but only after they've scrolled to that point.
+
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+  padding: 20px;
+}
+
+Using z-index for Layering
+z-index controls the stacking order of elements — higher values sit on top of lower ones.
+.box1 {
+  position: relative;
+  z-index: 1;
+  background: lightblue;
+}
+
+.box2 {
+  position: absolute;
+  z-index: 2;
+  background: red;
+}
+
+Common Use Cases
+
+Use Case	        Positioning Strategy
+Sticky navigation	position: sticky; top: 0 + z-index
+Modals/popups	    position: fixed + z-index: 9999
+Tooltips	        position: absolute relative to parent
+Image overlays	    Background element z-index: 1, content z-index: 2
+
+
+Best Practices
+Use position: sticky for headers, navbars, and alerts.
+Use z-index only when necessary — avoid overusing high values.
+Organize your layer stack (e.g., base = 0, content = 10, overlay = 100, modal = 1000).
+
+
+Summary
+Feature	    Purpose
+transition	Smooth change of CSS properties
+transform	Move, rotate, scale, or skew an element
+@keyframes	Define animation steps over time
+animation	Play custom animation defined in keyframes

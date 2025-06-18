@@ -1,0 +1,49 @@
+CSS Custom Properties (Variables)
+
+Goals:
+Use CSS variables for consistent, reusable styles
+Make themes easier to manage
+Dynamically change values (e.g., in dark mode)
+
+1. What Are CSS Variables?
+Custom properties (also known as CSS variables) are user-defined 
+variables declared with -- prefix and used with the var() function.
+
+2. Declaring CSS Variables
+Variables are typically defined inside a selector like :root so 
+they’re globally available.
+
+:root {
+  --main-color: #333;
+  --accent-color: #e91e63;
+  --font-size: 16px;
+}
+
+
+3. Using CSS Variables
+Use the var() function to reference the variable:
+
+body {
+  color: var(--main-color);
+  font-size: var(--font-size);
+}
+
+button {
+  background-color: var(--accent-color);
+}
+
+color: var(--main-color, black);
+
+
+4. Scoped Variables
+Variables can also be defined in specific elements:
+.card {
+  --card-bg: white;
+  background-color: var(--card-bg);
+}
+
+ 5. Changing Variables Dynamically
+CSS variables can be updated with JavaScript for themes, animations, 
+etc.
+
+document.documentElement.style.setProperty('--main-color', '#2196f3');

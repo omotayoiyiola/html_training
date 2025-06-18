@@ -50,3 +50,22 @@ Scale text based on screen size using vw (viewport width):
 h1 {
   font-size: 5vw; /* 5% of the viewport width */
 }
+
+5. Fluid Containers
+Make layouts adjust using percentages or viewport units:
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+Use vh and vw to size containers relative to the viewport:
+
+
+Summary Checklist
+Feature      	Mobile-First	         Desktop-First
+Base Styles	  Small Screens	         Large Screens
+Media Query	  min-width	             max-width
+Flexibility	  More future-proof	     Less adaptive

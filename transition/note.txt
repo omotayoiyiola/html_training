@@ -1,0 +1,44 @@
+Transitions & Animations in CSS
+✅ Goals:
+Smoothly animate element styles
+Create engaging hover effects and UI interactions
+Learn the difference between transition and animation
+
+1. CSS Transitions
+Transitions let you animate changes in CSS properties over time.
+
+selector {
+  transition: property duration timing-function delay;
+}
+
+button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: green;
+}
+
+
+Common properties you can animate:
+color
+background-color
+transform
+opacity
+width, height
+
+2. CSS Transform
+transform allows you to move, rotate, scale, or skew elements.
+
+/* Move element to the right */
+transform: translateX(100px);
+
+/* Rotate 45 degrees */
+transform: rotate(45deg);
+
+/* Scale up */
+transform: scale(1.5);
+
+/* Skew */
+transform: skew(20deg);

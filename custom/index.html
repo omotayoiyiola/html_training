@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables Example</title>
+    <style>
+      :root {
+        --main-color: #333;
+        --accent-color: #e91e63;
+        --bg-color: #f9f9f9;
+        --font-size: 18px;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--main-color);
+        font-size: var(--font-size);
+        font-family: Arial, sans-serif;
+        padding: 40px;
+      }
+
+      h1 {
+        color: var(--accent-color);
+      }
+
+      .btn {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-size: var(--font-size);
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .card {
+        --card-bg: white;
+        background-color: var(--card-bg);
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🚀 Welcome with CSS Variables</h1>
+    <p>This page uses custom properties for consistent and reusable styles.</p>
+
+    <button class="btn">Click Me</button>
+
+    <div class="card">
+      <h2>Card Title</h2>
+      <p>This card uses a locally scoped variable <code>--card-bg</code>.</p>
+    </div>
+  </body>
+</html>
