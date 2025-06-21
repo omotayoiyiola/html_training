@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-classes and Elements</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 30px;
+      }
+
+      /* Targeting 2nd and 3rd items */
+      li:nth-child(2) {
+        color: red;
+      }
+
+      li:nth-child(3n) {
+        font-weight: bold;
+        background-color: #f0f0f0;
+      }
+
+      /* First paragraph in section */
+      section p:first-child {
+        color: darkblue;
+        font-style: italic;
+      }
+
+      /* Using ::before and ::after on .card */
+      .card::before {
+        content: "🔥 ";
+        font-size: 20px;
+        color: orange;
+      }
+
+      .card::after {
+        content: " ✅";
+        font-size: 16px;
+        color: green;
+      }
+
+      .card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🍽 Menu List</h2>
+    <ul>
+      <li>Rice</li>
+      <li>Beans</li>
+      <li>Yam</li>
+      <li>Spaghetti</li>
+      <li>Soup</li>
+    </ul>
+
+    <section>
+      <p>This paragraph is first and styled with :first-child</p>
+      <p>This paragraph is normal.</p>
+    </section>
+
+    <div class="card">
+      This is a card with before and after pseudo-elements.
+    </div>
+  </body>
+</html>

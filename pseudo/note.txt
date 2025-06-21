@@ -1,0 +1,57 @@
+Advanced Pseudo-classes & Pseudo-elements in CSS
+Goals:
+Use pseudo-classes to style specific elements based on their position 
+or state
+Use pseudo-elements to insert or style virtual parts of an element
+
+ 1. :nth-child()
+Targets an element based on its position within its parent.
+
+li:nth-child(2) {
+  color: red; /* Only the second list item */
+}
+
+li:nth-child(odd) {
+  background: #f0f0f0;
+}
+
+li:nth-child(3n) {
+  font-weight: bold; /* Every third item */
+}
+
+2. :first-child
+Targets the first child of a parent.
+
+p:first-child {
+  color: blue;
+}
+
+Only applies if the <p> is actually the first child of its parent.
+
+3. ::before and ::after
+These pseudo-elements let you insert virtual content before or after 
+an element’s content.
+
+.card::before {
+  content: "🔥 ";
+  color: orange;
+}
+
+.card::after {
+  content: " ✔";
+  color: green;
+}
+
+You can use these to:
+Add decorative icons/symbols
+Create tooltips, ribbons, or labels
+Add quotes or dividers
+
+Remember: ::before and ::after need content to be visible.
+
+Summary Table
+Selector	    Type	        What it targets
+:nth-child(n)	Pseudo-class	Specific position in parent (1st, 2nd, odd, etc.)
+:first-child	Pseudo-class	First child of its parent
+::before     	Pseudo-element	Inserts content before element's content
+::after	        Pseudo-element	Inserts content after element's content

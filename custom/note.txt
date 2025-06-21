@@ -47,3 +47,9 @@ CSS variables can be updated with JavaScript for themes, animations,
 etc.
 
 document.documentElement.style.setProperty('--main-color', '#2196f3');
+
+Summary
+Use Case	                        Choose This
+Basic UI icons, fast integration	Font Awesome
+Material design integration	Material Icons
+Full control, animation, styling	Inline SVG

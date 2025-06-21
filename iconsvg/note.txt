@@ -1,0 +1,44 @@
+Icon Fonts & SVG in Web Design
+- Use icon fonts like Font Awesome or Material Icons
+- Embed and style SVGs inline with CSS
+- Learn when to use fonts vs SVGs
+
+1. Using Icon Fonts (Font Awesome, Material Icons)
+Icon fonts work like text but display icons instead of letters.
+
+Font Awesome Example (via CDN) Content Delivery Network
+Include this in <head>:
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<i class="fas fa-user"></i>
+<i class="fab fa-twitter"></i>
+
+i {
+  color: #007bff;
+  font-size: 24px;
+}
+
+Material Icons Example
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<i class="material-icons">home</i>
+
+2. Inline SVGs (Scalable Vector Graphics)
+SVGs can be included directly in HTML, allowing full CSS styling and 
+animation.
+
+svg:hover {
+  fill: coral;
+  cursor: pointer;
+}
+
+
+Icon Fonts vs SVG
+Feature	         Icon Fonts	          Inline SVG
+Resolution	     Scales well	        Perfect scaling
+Styling	Limited  (color, size)	        Fully styleable
+Animation	     Difficult	            Easy with CSS/keyframes
+Accessibility	 Needs extra attributes	Natural with <title> tag
+ 

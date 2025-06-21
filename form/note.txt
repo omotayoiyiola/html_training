@@ -1,0 +1,45 @@
+Forms and Input Styling in CSS
+Style different form elements: inputs, radio 
+buttons, checkboxes
+Understand how to create clean, accessible,
+and responsive form UIs
+
+Learn to customize checkboxes/radios using pseudo-elements
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+Tip: Always use label for accessibility.
+
+2. Radio Buttons and Checkboxes (Default)
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+These elements are hard to style directly, so for advanced 
+designs, we hide them and use ::before or ::after with label.
+
+3. 3. Custom Checkboxes/Radio Buttons
+Use this pattern:
+Hide the real input
+Style a label with ::before
+Style the checked state with :checked + label
+
+Summary Table
+Element	                Description
+input[type="text"]	    Text fields
+textarea	            Multi-line text input
+input[type="radio"]	    Single choice from multiple
+input[type="checkbox"]	Toggle on/off
+label + ::before	Used to create custom radio/checkbox look
+
+
