@@ -1,0 +1,57 @@
+SEO (Search Engine Optimization) is the practice of improving your website 
+so that search engines like Google can better understand, rank, and display 
+it in search results. It helps users find your content more easily.
+
+SEO Goals for Developers
+Make websites understandable by search engines
+Improve visibility in search results
+Enhance click-through rate (CTR)
+Ensure your site is accessible and usable by all users, including those with disabilities
+
+Key SEO Best Practices for Developers
+
+1. Key SEO Best Practices for Developers
+<header>, <nav>, <main>, <section>, <article>, <footer>
+<main>
+  <article>
+    <h1>10 CSS Tips You Should Know</h1>
+    <p>These CSS tips will improve your web styling skills...</p>
+  </article>
+</main>
+
+2.  Meta Tags
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="John Doe is a frontend developer specializing in React and UX design.">
+<meta name="robots" content="index, follow" />
+
+description: Shown in search result snippets
+viewport: Ensures mobile responsiveness (Google ranks mobile-friendly sites higher)
+
+3. Proper Use of Headings (<h1> to <h6>)
+Use only one <h1> per page (usually the page title)
+Organize other headings hierarchically like a table of contents
+
+<h1>Portfolio</h1>
+  <h2>Projects</h2>
+    <h3>E-commerce Site</h3>
+  <h2>Contact</h2>
+
+4. Alt Text for Images
+Use descriptive alt attributes so:
+
+Images are understandable by screen readers
+Google Images can index your content
+<img src="profile.jpg" alt="Profile photo of John Doe, web developer" />
+
+Form accessibility with <label> and aria-required
+
+
+Key Accessibility Highlights
+Feature	Why It Helps
+skip-link	       Lets keyboard users skip repetitive nav
+alt on image	   Helps screen readers describe visuals
+Semantic tags	   Defines structure for assistive tech
+aria-* attributes  Adds context (e.g., required fields)
+:focus outline	   Shows focus for keyboard navigation
+Labels + for	   Connects input fields and descriptions

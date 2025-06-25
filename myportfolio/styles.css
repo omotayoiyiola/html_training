@@ -2,9 +2,15 @@
   --main-color: gold;
 }
 
+* {
+  margin: 0;
+}
+
 header {
-  position: sticky;
+  position: fixed;
   display: flex;
+  background-color: aqua;
+  width: 100%;
 }
 
 .heart-icon {
@@ -35,6 +41,10 @@ p {
   display: flex;
   margin: 30px;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: chocolate;
+  width: 100%;
 }
 
 .card {
