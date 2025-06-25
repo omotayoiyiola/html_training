@@ -9,6 +9,19 @@ i {
   margin-right: 3px;
 }
 
+.two {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.three {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+
 button {
   background-color: black;
   color: white;
