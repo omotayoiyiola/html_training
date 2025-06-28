@@ -1,0 +1,14 @@
+flex: 1 1 200px;
+
+What Each Part Means:
+flex-grow: 1
+The item can grow to fill available space relative to other items.
+1 means it will grow proportionally with others also set to grow.
+
+flex-shrink: 1
+The item can shrink if necessary (e.g., on smaller screens).
+1 means it will shrink proportionally with others.
+
+flex-basis: 200px
+The initial/default size of the item before growing or shrinking.
+Here, each item will try to be 200px wide.
