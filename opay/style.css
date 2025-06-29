@@ -1,0 +1,106 @@
+:root {
+  --main-color: #1db99c;
+  --accent-color: #0077ff;
+  --header-bg: #f0f8ff;
+  --text-color: #333;
+  --bg-light: #fafafa;
+  --card-border: goldenrod;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: rgb(251, 251, 252);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.logo {
+  height: 35px;
+  margin-left: 60px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 15px;
+  margin: 0;
+  position: relative;
+  font-size: 12px;
+}
+
+.nav li {
+  position: relative;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.nav a:hover {
+  color: #222;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 10px 0;
+  margin-top: 5px;
+  list-style: none;
+  display: none;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a:hover {
+  color: #fff;
+  border-radius: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.about {
+  background-image: url(opayhome.jpg);
+  background-size: cover;
+  padding: 45px;
+}
+
+.about-text {
+  max-width: 50%;
+}
+
+.about-text h1 {
+  color: white;
+  font-size: 4.17vw;
+  width: 50vw;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 12px;
+  color: #210f60;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
