@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+  background-image: url(assets/netflix_bg.jpeg);
+  background-size: cover;
+  height: 700px;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  inset: 0;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+header::after {
+  content: "";
+  display: block;
+  height: 30px;
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(214, 48, 56, 0.9) 0%,
+    rgba(214, 48, 56, 0.6) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+nav {
+  padding: 20px 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  width: 150px;
+  z-index: 2;
+}
+
+button {
+  padding: 5px 10px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  border: none;
+  z-index: 2;
+}
+
+.get_started {
+  position: relative;
+  z-index: 3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px;
+  width: 45%;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.sub_note {
+  font-size: 18px;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.start_off {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.formstyle {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  height: 40px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 3px;
+  background: transparent;
+  width: 200px;
+  color: white;
+}
+
+.start_now {
+  border-radius: 4px;
+  padding: 2px 12px;
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  border: none;
+  font-size: 23px;
+  height: 100%;
+}

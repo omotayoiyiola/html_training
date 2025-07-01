@@ -1,0 +1,501 @@
+/* Universal Reset & Box Sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+html {
+  font-size: 16px; /* Base font size for rem units */
+}
+
+body {
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Prioritize Netflix Sans */
+  background-color: #000;
+  color: #fff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Improves text rendering */
+}
+
+/* General Link Styling */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility Classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem; /* ~4px */
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #e50914; /* Netflix Red */
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #ff0000;
+}
+
+.btn-red {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.btn-red:hover {
+  background-color: #ff0000;
+}
+
+/* Header (Hero Section) */
+.hero {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  max-height: 700px; /* Cap the height for larger screens */
+  background-image: url("assets/netflix_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+  padding-bottom: 3rem; /* Space for the bottom fade */
+  border-bottom: 8px solid #222; /* Separator line */
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  padding: 0 5%; /* Responsive padding */
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0; /* Adjust padding for content alignment */
+}
+
+.netflix-logo {
+  width: 100px; /* Smaller logo for mobile */
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .netflix-logo {
+    width: 150px; /* Larger logo for desktop */
+  }
+}
+
+.navbar .btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.hero-get-started {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-get-started h1 {
+  font-size: 2.5rem; /* Responsive font size */
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero-cta-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.email-form {
+  width: 100%;
+  max-width: 600px; /* Limit form width */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stack input and button on small screens */
+  gap: 1rem; /* Space between input and button */
+  align-items: center;
+}
+
+.email-form input {
+  flex-grow: 1;
+  padding: 1rem 1.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid #8c8c8c;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff;
+  font-size: 1rem;
+  width: 100%; /* Full width for input */
+}
+
+.email-form input::placeholder {
+  color: #8c8c8c;
+}
+
+.email-form input:focus {
+  outline: none;
+  border-color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-get-started {
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  min-height: 3rem; /* Ensure button has a minimum height */
+  white-space: nowrap; /* Prevent "Get Started" from wrapping */
+}
+
+/* Media Queries for Hero Section */
+@media (min-width: 768px) {
+  .hero-get-started h1 {
+    font-size: 3.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero-cta-text {
+    font-size: 1.25rem;
+  }
+  .form-group {
+    flex-direction: row; /* Row layout for input and button on larger screens */
+    gap: 0.5rem; /* Smaller gap in row layout */
+  }
+  .email-form input {
+    width: auto; /* Allow input to shrink/grow based on flex */
+  }
+  .btn-get-started {
+    font-size: 1.875rem; /* Larger font for desktop button */
+    padding: 0.8rem 1.5rem;
+    min-height: 60px; /* Specific height for the button */
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-get-started h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Main Content - Feature Sections */
+main {
+  background-color: #000;
+}
+
+.feature-section {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  justify-content: center;
+  padding: 70px 5%;
+  border-bottom: 8px solid #222;
+  text-align: center;
+  gap: 20px; /* Space between text and image */
+  overflow: hidden; /* Important for video positioning */
+}
+
+.feature-section:last-of-type {
+  border-bottom: none; /* No border for the last section */
+}
+
+.feature-content {
+  max-width: 600px;
+}
+
+.feature-content h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.feature-content p {
+  font-size: 1.3rem;
+}
+
+.feature-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.feature-image-container img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 73%; /* Adjust based on the specific image/video fit */
+  height: 54%; /* Adjust based on the specific image/video fit */
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Adjust video for the TV feature (specific to Netflix original) */
+.feature-section:nth-child(1) .feature-video {
+  width: 73%; /* Example adjustment */
+  height: 54%; /* Example adjustment */
+  top: 46%; /* Adjusted to fit the TV screen */
+  left: 50%;
+}
+
+/* Adjust video for the device feature (specific to Netflix original) */
+.feature-section:nth-child(3) .feature-video {
+  width: 63%; /* Example adjustment */
+  height: 47%; /* Example adjustment */
+  top: 34%; /* Adjusted to fit the device screen */
+  left: 50%;
+}
+
+/* Desktop layout for feature sections */
+@media (min-width: 768px) {
+  .feature-section {
+    flex-direction: row; /* Row layout for desktop */
+    text-align: left;
+    padding: 70px 45px; /* Adjust horizontal padding */
+  }
+
+  .feature-section.alt-direction {
+    flex-direction: row-reverse; /* Reverse direction for alternating sections */
+  }
+
+  .feature-content,
+  .feature-image-container {
+    flex: 1; /* Distribute space equally */
+  }
+
+  .feature-content {
+    padding-right: 30px; /* Space between text and image */
+  }
+
+  .feature-section.alt-direction .feature-content {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  .feature-content h2 {
+    font-size: 3.125rem;
+  }
+
+  .feature-content p {
+    font-size: 1.625rem;
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 70px 5%;
+  text-align: center;
+  border-bottom: 8px solid #222;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.accordion {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 0.5rem;
+  background-color: #303030;
+}
+
+.accordion-header {
+  background-color: #303030;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1.25rem 1.875rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #414141;
+}
+
+.accordion-header::after {
+  content: "+";
+  font-size: 2.5rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  background-color: #303030;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 0 1.875rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-content p {
+  padding: 1.25rem 0;
+}
+
+.faq-section .bottom-cta {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq-section .bottom-form {
+  margin-bottom: 2rem;
+}
+
+/* Media Queries for FAQ Section */
+@media (min-width: 768px) {
+  .faq-section h2 {
+    font-size: 3.125rem;
+  }
+  .accordion-header {
+    font-size: 1.625rem;
+  }
+  .accordion-content {
+    font-size: 1.625rem;
+  }
+}
+
+/* Footer */
+.footer {
+  padding: 40px 5%;
+  color: #757575;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin-bottom: 1.5rem;
+}
+
+.footer-content p a {
+  color: #757575;
+}
+
+.footer-content p a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  gap: 1rem;
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+  color: #757575;
+  font-size: 0.8rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.language-selector select {
+  background-color: #000;
+  border: 1px solid #757575;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.copyright {
+  font-size: 0.8rem;
+}
+
+/* Media Queries for Footer */
+@media (min-width: 500px) {
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-links {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+  }
+  .footer-content p {
+    font-size: 1rem;
+  }
+}
